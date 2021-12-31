@@ -1,0 +1,1277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Linux)"/>
+	<meta name="created" content="2021-12-27T22:40:00.415568380"/>
+	<meta name="changed" content="2021-12-31T15:37:55.942138837"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		h1 { margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Serif CJK SC"; font-size: 24pt; font-weight: bold }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 24pt; font-weight: bold }
+		h2 { margin-top: 0.35cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Liberation Serif", serif; font-size: 18pt; font-weight: bold }
+		h2.cjk { font-family: "Noto Serif CJK SC"; font-size: 18pt; font-weight: bold }
+		h2.ctl { font-family: "Lohit Devanagari"; font-size: 18pt; font-weight: bold }
+		h3 { margin-top: 0.25cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "Noto Serif CJK SC"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "Lohit Devanagari"; font-size: 14pt; font-weight: bold }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "Noto Sans Mono CJK SC", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		td p { background: transparent }
+		strong { font-weight: bold }
+		em { font-style: italic }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-IN" link="#000080" vlink="#800000" dir="ltr">
+<div id="Table of Contents1" dir="ltr">
+	<div id="Table of Contents1_Head" dir="ltr"><p style="margin-top: 0.42cm; margin-bottom: 0.21cm; line-height: 100%; page-break-after: avoid">
+		<font face="Liberation Sans, sans-serif"><font size="4" style="font-size: 16pt"><b>Table
+		of Contents</b></font></font></p>
+	</div>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1438_4083667713">1.
+	Business Problem	2</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1440_4083667713">1.1 Introduction	2</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1442_4083667713">1.2 Problem Statement	2</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1444_4083667713">1.3. Business
+	Constraints	2</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1446_4083667713">1.4. Benefits of
+	Modelling, Customer Metrics	2</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1448_4083667713">2
+	Type of Machine Leaning Problem	3</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1450_4083667713">3
+	Exploratory Data Analysis	3</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1452_4083667713">3.1 Data Fields	3</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1454_4083667713">3.1 Load Data and
+	Format fields	3</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1456_4083667713">3.2 Analyse Data	3</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1458_4083667713">3.3 Check Feature
+	Values	4</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1460_4083667713">3.3 Null Processing	4</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1462_4083667713">3.4 Univariate Analysis
+	for Numeric fields	4</a></p>
+	<p style="margin-left: 1cm; margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1464_4083667713">3.4.1
+	Analysis of target variable: totals.totalTransactionRevenue	4</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1466_4083667713">3.6 </a><a href="#__RefHeading___Toc1466_4083667713">B</a><a href="#__RefHeading___Toc1466_4083667713">ivariate
+	analysis</a><a href="#__RefHeading___Toc1466_4083667713">	5</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1468_4083667713">3.7 Time Series
+	Analysis	5</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1470_4083667713">4
+	Feature Engineering	5</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1472_4083667713">4.2 Encode Categorical
+	features	6</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1474_4083667713">5
+	prepare data for Time Series	6</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1476_4083667713">5.1 Find Feature
+	Importance	6</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1478_4083667713">6
+	Models	6</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1480_4083667713">6.0 Data Modelling	6</a></p>
+	<p style="margin-left: 1cm; margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1484_4083667713">Hyperparameter
+	Optimization	7</a></p>
+	<p style="margin-left: 1cm; margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1540_4083667713">LightGBM
+	Model	8</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1486_4083667713">6.6 Model Scores	8</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1510_4083667713">7.0
+	Model Analysis	9</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1512_4083667713">7.0.0 Objective	9</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1514_4083667713">7.1.1 LBG
+	classification model	9</a></p>
+	<p style="margin-left: 1cm; margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1522_4083667713">Conclusion
+	of Data Analysis:	9</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1524_4083667713">7.3 LBG Regression
+	model	10</a></p>
+	<p style="margin-left: 1cm; margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1526_4083667713">7.3.2
+	LBG Regression Data Analysis: Remove outliers	10</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1528_4083667713">7.4 Conclusion	10</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1530_4083667713">8</a><a href="#__RefHeading___Toc1530_4083667713">
+	Model Deployment </a><a href="#__RefHeading___Toc1530_4083667713">API</a><a href="#__RefHeading___Toc1530_4083667713">	10</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1532_4083667713">Objective and Function
+	Description	10</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1534_4083667713">process_data(in_point)	10</a></p>
+	<p style="margin-left: 0.5cm; margin-bottom: 0cm; line-height: 100%">
+	<a href="#__RefHeading___Toc1536_4083667713">regr_metric(test_sampl,y_pred)	11</a></p>
+	<p style="margin-bottom: 0cm; line-height: 100%"><a href="#__RefHeading___Toc1538_4083667713">9</a><a href="#__RefHeading___Toc1538_4083667713">
+	Model Deployment </a><a href="#__RefHeading___Toc1538_4083667713">on
+	Cloud</a><a href="#__RefHeading___Toc1538_4083667713">	11</a></p>
+</div>
+<p align="left" style="margin-top: 0.52cm; margin-bottom: 0.31cm; line-height: 100%; page-break-after: avoid">
+<br/>
+<br/>
+
+</p>
+<p align="left" style="margin-top: 0.52cm; margin-bottom: 0.31cm; line-height: 100%; page-break-after: avoid">
+<br/>
+<br/>
+
+</p>
+<p align="left" style="margin-top: 0.52cm; margin-bottom: 0.31cm; line-height: 100%; page-break-after: avoid">
+<font face="Liberation Sans, sans-serif"><font size="5" style="font-size: 21pt"><b>Google
+Analytics Customer Revenue Prediction</b></font></font></p>
+<p align="justify" style="margin-top: 0.1cm; margin-bottom: 0.1cm; line-height: 100%">
+This project is an attempt to understand the end-to-end
+implementation of Data Science project from project definition,
+EDA,preprocessing,featurisation,modelling and deployment. Performing 
+these activities will help gain practical exposure of implenting a
+data science project.</p>
+<h1 class="western"><a name="__RefHeading___Toc1438_4083667713"></a><font size="5" style="font-size: 20pt">1.
+Business Problem</font></h1>
+<h2 class="western" style="margin-top: 0cm; margin-bottom: 0cm"><a name="__RefHeading___Toc1440_4083667713"></a>
+<font size="4" style="font-size: 16pt">1.1 Introduction</font></h2>
+<p align="justify" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Online
+marketing is a billion-dollar industry. Companies spend a lot of
+money by targeting users who visit their website once, to encourage
+them to buy products from them. But major part of the revenue comes
+from only a small percentage of users. Instead of targeting everyone
+who visits the website, marketing budget can better be utilized If
+they target only those users who are most likely to purchase a
+product in the future</font></font></p>
+<h2 class="western"><a name="__RefHeading___Toc1442_4083667713"></a>1.2
+Problem Statement</h2>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Google
+has provided Merchandise customer dataset and no.of transactions per
+customer.Using this data we need to predict future revenue created by
+customers. If we build a predictive model using G-store data set to
+predict revenue per customer. This prediction can be used to identify
+high revenue customers.This helps in better use of marketing budget.</font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1444_4083667713"></a>1.3.
+Business Constraints</h2>
+<ol>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+	<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Customers
+	producing revenue is sparse. Only a small percentage of customers
+	produce revenue.</font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+	<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Customer
+	visits follow a time pattern (time dependent).</font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+	<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">No
+	strict latency concerns.</font></font></p>
+	<li><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+	<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Interpretability
+	is useful for business analysis.</font></font></p>
+</ol>
+<h2 class="western"><a name="__RefHeading___Toc1446_4083667713"></a>1.4.
+Benefits of Modelling, Customer Metrics</h2>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">We
+ use a data driven approach  to  identify features which help in
+better prediction. The marketing team can use this information to
+more effectively utilise the advertising budget.</font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">After
+implementing the predictive model.following metrics can be used to
+measure benefits</font></font></p>
+<ol>
+	<li><p style="margin-bottom: 0cm; line-height: 100%; orphans: 2; widows: 2">
+	<strong><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Improve
+	Customer Experience</b></span></span></font></font></span></strong><strong><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">.</span></span></span></font></font></span></strong><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+	This can be measured by percentage increase customer visits to store
+	and repeat visits.<br/>
+</span></span></span></font></font></span><span style="font-variant: normal"><font color="#0000ff"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">visits
+	= No of unique fullVisitorId visiting the store(in time step)<br/>
+repeat
+	visit = No of fullVisitorId visiting storeafter fixed time.</span></span></span></font></font></font></span></p>
+	<li><p style="line-height: 100%; orphans: 2; widows: 2"><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Better
+	use of marketing budget on high value customers. This can be
+	measured by</span></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>
+	</b></span></span></font></font></span><strong><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>average
+	revenue per customer</b></span></span></font></font></span></strong><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>.</b></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><br/>
+</span></span></span></font></font></span><span style="font-variant: normal"><font color="#0000ff"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">average
+	revenue = sum(totalRevenue)/No of fullVisitorId having transaction &gt;
+	0</span></span></span></font></font></font></span></p>
+</ol>
+<h1 class="western"><a name="__RefHeading___Toc1448_4083667713"></a><font face="Liberation Serif, serif"><font size="5" style="font-size: 20pt"><b>2
+Type of Machine Leaning Problem</b></font></font></h1>
+<p style="margin-top: 0.3cm; margin-bottom: 0.3cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">This
+is a Time Series regression problem. We are predicting the natural
+log of sum of all transactions per user to predict total revenue per
+customer.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h1 class="western" style="margin-top: 0cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2"><a name="__RefHeading___Toc1450_4083667713"></a><a name="3--Exploratory-Data-Analysis"></a>
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="5" style="font-size: 20pt"><b><font color="#000000">3
+Exploratory Data Analysis</span></b></font></font></font></h1>
+<p style="margin-top: 0.2cm; margin-bottom: 0.2cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">In
+EDA we find relationship,correlations, feature distributions,  within
+the data.  Data quality,missing values, anamolies and outliers is
+also checked.  </span></font></font></font>
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">In
+this project following tasks were done for EDA</span></font></font></font></p>
+<h2 class="western"><a name="__RefHeading___Toc1452_4083667713"></a><a name="-Data-Fields"></a>
+<font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b>3.1
+Data Fields</b></font></font></h2>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><u><b>fullVisitorId</b></u>-
+A unique identifier for each user of the Google Merchandise
+Store.<br/>
+<u><b>channelGrouping</b></u> - The channel via which the
+user came to the Store.<br/>
+<u><b>date</b></u> - The date on which
+the user visited the Store.<br/>
+<u><b>device</b></u> - The
+specifications for the device used to access the Store.<br/>
+<u><b>geoNetwork</b></u>
+- This section contains information about the geography of the
+user.<br/>
+<u><b>sessionId</b></u> - A unique identifier for this
+visit to the store.<br/>
+<u><b>socialEngagementType</b></u> -
+Engagement type, either &quot;Socially Engaged&quot; or &quot;Not
+Socially Engaged&quot;.<br/>
+<u><b>totals</b></u> - This section
+contains aggregate values across the session.<br/>
+<u><b>trafficSource</b></u>
+- This section contains information about the Traffic Source from
+which the session origina ted.<br/>
+<u><b>visitId</b></u> - An
+identifier for this session. This is part of the value usually stored
+as the _utmb cookie. This is only unique to the user. For a
+completely unique ID, we should use a combination of fullVisitorId
+and visitId.<br/>
+<u><b>visitNumber</b></u> - The session number for
+this user. For the first session,this is set to 1.<br/>
+<u><b>visitStartTime</b></u>
+- The timestamp (expressed as POSIX time)</span></font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">Each
+row in dataset represents a  visit to store.We  are predicting log of
+total revenue per user. So not all rows in test.csv corresponds to a
+row in submisssion file.But all unique </span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="text-decoration: none"><b><strong>fullVisitorIds</b></span></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="text-decoration: none"><span style="font-weight: normal"><strong>
+</span></span></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="text-decoration: none"><span style="font-weight: normal"><strong>corresponds
+to a row in submission.</span></span></span></span></span></font></font></font></span></strong></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal"><a name="__RefHeading___Toc1454_4083667713"></a><a name="3.1-Load-Data-and-Format-fields"></a>
+<font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b>3.1
+Load Data and Format fields</b></font></font></h2>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Here
+we load data from csv files. The fields device , geoNetwork, totals ,
+trafficSource are JSON fields. JSON format is used to store simple
+data structures into a file and load them into programs.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Here
+we deserialize JSON and convert  it into flat fields using functions
+from json library. </span></font></font></font>
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Since
+the data is quite big we need a VM with sufficent memory and disk
+space to store the data. </span></font></font></font>
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#0000ff">So
+selection of proper hardware and software is vital for the success of
+the project. The VM used here is google Compute engine with of type
+e2-highmen-4 ( 4 vCPU, 32 GB RAM) and 500 GB disk space with debain10
+and tf 2.0.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal"><a name="__RefHeading___Toc1456_4083667713"></a><a name="3.2-Analyse-Data"></a>
+<font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b>3.2
+Analyse Data</b></font></font></h2>
+<p style="margin-bottom: 0cm; line-height: 100%"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">Data
+analysis is part of EDA where we try to get overview of data.From
+Data exploration we understand the characteristics of data like data
+size,data types. </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">We
+compute s</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">ummary
+statistics of data like mean variance, quantiles </span></span></span></span></font></font></font></span>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1458_4083667713"></a><a name="3.2-Check-Feature-Values"></a>
+3.3 Check Feature Values</h2>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">For
+Numeric features we get summary statistics for each column using
+<b>describe()</b> function.This function displays the min.max.
+Quantiles,mean and variance.For some columns the std =0 incicating
+that these columns have constant values which are not useful in
+modelling. So these columns can be removed.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">For
+Categorical features we check the frequencies of categorical features
+using <b>describe(include=['O'])  </b>command. This command shws that
+for some columns we have  some columns with unique=1.( single value
+or Constants).Constants are not useful in modelling and these
+features can be removed.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Thus
+using EDA features can be pruned and transformed to improve models
+significantly.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1460_4083667713"></a><a name="3.3-Null-Processing"></a>
+3.3 Null Processing</h2>
+<p style="margin-bottom: 0cm; line-height: 100%">EDA also involves
+performing data quality analysis to detemine missing values in the
+dataset. For  Numerical Features we check count of  missing values.
+Features having large percentage of missing values are not useful for
+modelling and can be dropped. For other Numerical Features having
+small percentage of nulls, we replace nulls with numeric features.</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">For
+<span style="font-variant: normal"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Categorical
+Features nulls are replaced with mode (most frequent value) of the
+feature.</span></span></span></span></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1462_4083667713"></a><a name="3.4--Univariate-Analysis-for-Numeric-fields"></a>
+3.4 Univariate Analysis for Numeric fields</h2>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">We
+use univariate analysis to identify if data contains outliers.It also
+helps to identify features which need data transformation or feature
+engineering.   Using data visualization, we can  see distribution of
+data, identiy   skewness in data and identify outliers.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<h3 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal"><a name="__RefHeading___Toc1464_4083667713"></a><a name="3.4.1----Analysis-of-target-variable:-totals.totalTransactionRevenue"></a>
+<font color="#191917"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>3.4.1
+Analysis of target variable: totals.totalTransactionRevenue</b></font></font></font></h3>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+target value is continuous in case of regression problems. Regression
+is a statistical for estimating relationship between a dependent
+variable and one or more independent variables. For regression model
+we use peformance metrics </span></font></font></font>
+</p>
+<ul>
+	<li><p style="margin-bottom: 0.05cm; font-variant: normal; letter-spacing: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><u><span style="font-weight: normal"><font color="#000000">Mean
+	Absolute percentage error(MAPE):</span></u></span></font></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal"><font color="#000000">To
+	measure model performance we can use MAPE.to know on average how
+	good is the model with predictions.</span></span></span></font></font></font></p>
+	<li><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><u>Mean
+	Squared error(MSE)</u>: shows how well the forecasting model
+	performs with outliers. To check if there is not much of a error
+	margin between predicted and actual value</span></font></font></font></p>
+</ul>
+<p style="line-height: 100%"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">From</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+parametric distribution of  target variable using distplot() ,we
+observe</span></span></span></span></font></font></font></span></p>
+<ol>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">field
+	deviates from the normal distribution.</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Has
+	appreciable positive skewness.</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Show
+	peakedness.</span></font></font></font></p>
+	<li><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Target
+	field follows log normal distribution</span></font></font></font></p>
+</ol>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+Q-Q plot of target variable with log normal gives a 45 degee line
+which shows that the target has a log normal distribution.
+Logarithmic transformation is a technique to convert skewed
+distribution to a normal distribution.</span></font></font></font></p>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">From
+the plot it is observed that in field
+&quot;totals.totalTransactionRevenue&quot; 99% of values is less than
+16990000.0. and 99.9 of values is less than 300570000.0. There are
+roughly 1700 values with greater than 300570000.0</span></font></font></font></p>
+<p style="font-variant: normal; letter-spacing: normal"><span style="display: inline-block; border: none; padding: 0cm"><font color="#0000ff"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal"><em>From
+univariate analysis we conclude that for maximum benefit one needs to
+focus on top 0.01 percentile for high value segment and top 10
+percetile for top segment. <br/>
+For categorical features the focus
+should be top few values.</span></span></span></font></font></font></em></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#0000ff"> <font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">It
+is observed that data is sparse since most points do not
+contibute.This aspect has to be handled in modelling the data. </font></font></font>
+</p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1466_4083667713"></a><a name="3.6-bivariate-analysis"></a>
+<span style="font-variant: normal"><span style="letter-spacing: normal"><span style="font-style: normal">3.6
+</span></span></span><span style="font-variant: normal"><span style="letter-spacing: normal"><span style="font-style: normal">B</span></span></span><span style="font-variant: normal"><span style="letter-spacing: normal"><span style="font-style: normal">ivariate
+analysis</span></span></span></h2>
+<p style="margin-bottom: 0cm; line-height: 100%"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">Using
+ </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><span style="font-variant: normal">.corr()</b></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+method we can compute Pearson correlation between every variable and
+the target. Using   correlation analysis we can  </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">get
+ </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">collinear
+relation between independent variables. Since linear regression
+assumes no collinearity among independent features, </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">f</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">eatures
+having high correlati</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">o</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">n
+can be dropped since they dont add any value.</span></span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; line-height: 100%">
+<br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1468_4083667713"></a><a name="3.7-Time-Series-Analysis"></a>
+3.7 Time Series Analysis 
+</h2>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Obervations
+recorded at regular time intervals are termed as Time series. The
+frequency can be houly,daily,weekly,monthly,annual.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">By
+creating features from time variable, machinelearning algorithms can
+be used for time series problems.Machine Learning for time series is
+a powerful technique to identify hidden complexities compared to
+classical methods.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Analysis
+of time series data over time is done by grouping data using
+frequency.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Time
+series consists of following components</span></font></font></font></p>
+<ol>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Trend:
+	observed when there is increase or decrease in slope.</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Seasonality:
+	repeated patterns observed at regular intervals due to seasonal
+	factors.</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; line-height: 100%"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">Cyclic
+	pattern d</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">o</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">e</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">s</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+	not follow any calendar frequency.Un</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">l</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">ike
+	seasonality they are affected by business and socio-economic
+	factors.</span></span></span></span></font></font></font></span></p>
+</ol>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Stationary
+time series properties are not time dependent.So statistical
+properties like<span style="background: transparent"> mean, variance</span></span></font></font></font></p>
+<p><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">and
+autocorrelation are constant over time.It is east to forecast for
+stationary series.So </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">using</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+tranform  </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">to
+</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">make
+series stationary is important.</span></span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">Autocorrelation
+is correraltion of series with its lag. </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">ACF</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+can be used for prediction  using the lags.</span></span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Moving
+average is the average  of rolling window of selected width.Choosing
+a good window width  can nullify seasonality. An expanding window
+contains  prior values also. For a time series problem validation
+data has to be choosen such that data order is preserved.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">From
+ time series plot we conclude that </span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#0000ff"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#0000ff"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">periods
+showing the peaks in time series have to utilised for more gains to
+the store.</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc1470_4083667713"></a><a name="4-Feature-Engineering"></a>
+4 Feature Engineering</h1>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">According
+to Andrew Ng &quot;applied machinelearning is basically feature
+engineering”.  </span></font></font></font>
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Feature
+engineering consists of </span></font></font></font>
+</p>
+<ul>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><u>Feature
+	Construction</u>: is adding new features to exiting data</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><u>Feature
+	Selection</u>: is selection of most important features</span></font></font></font></p>
+</ul>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">For
+time series problems we use feature constrcution from time data so
+that the model can identify hidden time patterns.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+features extracted are </span></font></font></font>
+</p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">•
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Window
+statistics:</span></font></font></font></p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">•
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Max/min
+value of series in a window</span></font></font></font></p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">•
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Average/median
+value in a window</span></font></font></font></p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">•
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Window
+variance  etc.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">To
+generate use level features we group by field fullVisitorId.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Date
+and time features:</span></font></font></font></p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">•
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Minute
+of an hour, hour of a day, day of the week, and so on</span></font></font></font></p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">•
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Is
+this day a holiday? Maybe there is a special event? Represent that as
+a boolean</span></font></font></font></p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">feature</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b><font color="#000000">It
+is important that to note that any tranformation that is done for
+training data, the same transformation is also required for test
+data.</span></b></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1472_4083667713"></a><a name="4.2-Encode-Categorical-features"></a>
+4.2 Encode Categorical features</h2>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><b>Label
+encoding </b>assigns an integer to each unique category in a
+categorical variable.No new columns are created. When Cardinality of
+Features is high  label encoding is used. The disadvantage of Label
+encoding is it gives arbitrary order to the variables.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">In
+<b>one hot encoding </b>a new column is created for each unique
+value.The disadvantage is number of dimensions increases when
+cardinality is high.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc1474_4083667713"></a><a name="5-prepare-data-for-time-series"></a>
+5 Prepare data for Time Series</h1>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+test dataset provided has dates from 1-may-2018 to 15-oct-2018. The
+time window is 168 days. This time window can be used to create the
+train datasets for time series.</span></font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+prediction time frame is 1-dec-2018 to 31-jan-2019. The difference
+between the train and prediction dates is 46 days (
+15-oct-2018,1-dec-2018 ). This gap is maintained between train and
+test for creation of test dataset for time series. The prediction
+time window is 62 days. This window is used for test
+dataset.<br/>
+Customers present in both train and test are identified
+as common customers.</span></font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Using
+above criterion, we create 4 sets of data to train the prediction
+model.</span></font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1476_4083667713"></a><a name="5.1-Find-Feature-Importance"></a>
+5.1 Find Feature Importance</h2>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Feature
+importance is the importance or contribution for the supervised task
+( classification or regression).Using this the effectiveness of
+feature engineering can be obtained.The feature importance graph
+shows the feature importance for around 140 variables in the input
+dataset.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc1478_4083667713"></a><a name="6-Models"></a>
+6 Models</h1>
+<h2 class="western"><a name="__RefHeading___Toc1480_4083667713"></a><a name="6.0.0-Data-Modelling"></a>
+6.0 Data Modelling</h2>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">We
+use two stage modeling approach and Pose Problem as “classification
+and regression”.<br/>
+1- predict probability of returning of
+customer using all train set.The idea is to classify non-zero
+transactions first and use that for better results for revenues.data
+imbalance can be handled using under-sampling/ oversampling.<br/>
+2-
+predict amount of transactions for those customers who returned.So,
+in regression task train was filtered only by customers who had a
+session in 62- day window.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><span style="font-variant: normal"><font color="#000000"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="2" style="font-size: 10pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">	</span></span></span></font></font></font></span><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">This
+competition is a regression problem about predicting customer
+revenue. From EDA we observe that training data has very few non zero
+transactions. So it is a good</span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="2" style="font-size: 10pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+idea to </span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="2" style="font-size: 10pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">first
+run a </span></span></span></font></font></font></span><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">classifier
+to identify non-zero customers.The classifier predicts the purchase
+probability.Then we use regression model trained only on the non-zero
+customers for better prediction.</span></span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+approach here is to try different combinations of the models and
+select the combination with the best prediction for implementation.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><u><font color="#000000">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Logistic
++ Linear regression</span></u></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">First
+model used is logistic classification and Linear regression.Logistics
+regression tries to find linear hyperplane to separate the two
+classes.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><u><font color="#000000">SGDClassifier,
+SGDRegressor model</span></u></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Stochastic
+Gradient Descent (SGD) classifier basically implements a plain SGD
+learning routine. Using loss= ’ĺog’ gives logistic regression.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: none">SGDRegressor
+uses  loss='squared_loss’</span></span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; text-decoration: none">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><u><font color="#000000">DT-Classifier,
+ Support Vector Regressor</span></u></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+preformance of SVCClassifier was not good since training time is n^2.
+So for large datasets the performance is not good.So DT Classifier
+was used instead.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Gradient
+Descent (SGD) classifier basically implements a plain SGD learning
+routine. Using loss= ’ĺog’ gives logistic regression.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; text-decoration: none">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">SGDRegressor
+uses  loss='squared_loss’</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; text-decoration: none">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b><font color="#000000">Linear
+classifiers try to find a hyperplane to a hyperplane to separate the
+two classes. When data is not linearly separable the performance of
+linear classifier is not good.</span></b></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><a name="__RefHeading___Toc1482_4083667713"></a>
+<u>DecisionTree model</u></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Decision
+Trees are interpretable and easily capture non-linear patterns and
+non-parametric.  Decision Trees splits data based on best 
+differentiator which minimises cost metric. The metric for
+clasification is  entropy or the gini index. For regression it is
+mean squared error. Decision tree structure consists of root,branch
+and leaf nodes. </span></font></font></font>
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<font color="#000000"> </font>
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><u><font color="#000000">Random
+Forest Model</span></u></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; text-decoration: none">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Random
+Forest is a  collection of decorrelated decision trees. Random forest
+is a bagging techique.This is an ensemble of learners to create model
+of low variance. Random Forest ovecomes the overfit tendency of
+decision trees.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; text-decoration: none">
+<br/>
+
+</p>
+<h3 class="western"><a name="__RefHeading___Toc1484_4083667713"></a><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b>Hyperparameter
+Optimization</b></font></font></h3>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Hyperparameters
+are algorithm settings that can be adjusted to optimise performance.
+The  techniques used for optimising are RandomizedSearchCV and 
+GridSearchCV. RandomizedSearchCV is used when there are large number
+of hyperparameters. For tree based models hyperparameters are grouped
+into 4 categories.</span></font></font></font></p>
+<p style="margin-left: 0.7cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 115%; background: transparent; page-break-before: auto">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">1.Parameters
+that affect the structure and learning of decision trees</span></font></font></font></p>
+<p style="margin-left: 0.7cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 115%; background: transparent; page-break-before: auto">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">2.Parameters
+that affect the training speed</span></font></font></font></p>
+<p style="margin-left: 0.7cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 115%; background: transparent; page-break-before: auto">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">3.Parameters
+for better accuracy</span></font></font></font></p>
+<p style="margin-left: 0.7cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 115%; background: transparent; page-break-before: auto">
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">4.Parameters
+to combat overfitting</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm"><span style="font-variant: normal"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">T</span></span></span></font></font></span><span style="font-variant: normal"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">he
+hyperparameters for RF model are </span></span></span></font></font></span>
+</p>
+<p style="margin-bottom: 0cm"><u>Criterion</u>: tells how good  is 
+the splitting of a node of a decision tree.</p>
+<p style="margin-bottom: 0cm"><u>max_depth</u>: number of levels in
+each tree 
+</p>
+<p style="margin-bottom: 0cm"><u>max</u>_<u>features</u>: number of
+features considered, at the most, while splitting a node.</p>
+<p style="margin-bottom: 0cm"><u>min_samples_leaf</u>: number of
+samples that a leaf can store, at the least.</p>
+<p style="margin-bottom: 0cm"><u>min_samples_split</u>:  minimum
+number of samples in a node for splitting of the node.</p>
+<p style="margin-bottom: 0cm"><u>n_estimators</u>:  number of trees
+in ensemble 
+</p>
+<p style="margin-bottom: 0cm"><u>bootstrap</u> : method for sampling
+data points (with or without replacement)</p>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<h3 class="western"><a name="__RefHeading___Toc1540_4083667713"></a>LightGBM
+Model</h3>
+<p style="margin-bottom: 0cm">Gradient boosting uses weak
+learners(decision trees). The trees are built sequentially.</p>
+<p style="margin-bottom: 0cm">- The first tree learns to fit the
+target variable</p>
+<p style="margin-bottom: 0cm">- The  second tree learns to fit the
+residual error between prediction of first learner and ground truth.</p>
+<p style="margin-bottom: 0cm">- The next tree learns using residual
+of previous step and so on.</p>
+<p style="margin-bottom: 0cm">The trees are trained by propagating
+the gradients of errors. LBGM trains fast and uses less memory.
+Unlike XGBoost LBGM uses leaf-wise growth. This increases growth and
+reduces error. <span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Leaf-wise
+algorithm can reduce more loss than a level-wise algorithm.</span></span></span></font></font></span></p>
+<p style="margin-bottom: 0cm">The Control parameters of LBGM are</p>
+<p style="margin-bottom: 0cm"><u>max_depth</u> :  maximum depth of
+tree. Handles model overfitting.</p>
+<p style="margin-bottom: 0cm"><u>min_data_in_leaf</u> : minimum
+number of  records a leaf. Handles  overfitting.</p>
+<p style="margin-bottom: 0cm"><u>num_leaves</u> : Maximum tree leaves
+for base learners. higher value results in deeper trees.</p>
+<p style="margin-bottom: 0cm"><u>min_child_samples</u> : minimum
+number of data points in child (leaf) node.  very important parameter
+to prevent overfitting.</p>
+<p style="margin-bottom: 0cm"><u>feature_fraction:</u>  select  % of
+parameters randomly used in each iteration for building trees.</p>
+<p style="margin-bottom: 0cm">•<u> bagging_fraction</u> :  fraction
+of data   used for each iteration. used to speed up training and
+avoid overfitting.</p>
+<p style="margin-bottom: 0cm">• <u>early_stopping_round</u> : 
+speed up analysis. Model will stop training if one metric of one
+validation data doesn’t improve in last early_stopping_round
+rounds. This  reduces excessive iterations.</p>
+<p style="margin-bottom: 0cm">• <u>lambda</u> : lambda specifies
+regularization. Typical value ranges from 0 to 1.</p>
+<p style="margin-bottom: 0cm">• <u>min_gain_to_split </u>:  
+minimum gain to make a split. controls number of useful splits in
+tree.</p>
+<p style="margin-bottom: 0cm">•  <u>boosting</u> : defines the type
+of algorithm you want to run, default=gdbt.</p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm">• gbdt :
+traditional Gradient Boosting Decision Tree</p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm">• rf : random
+forest</p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm">• dart :
+Dropouts meet Multiple Additive Regression Trees</p>
+<p style="margin-left: 1.25cm; margin-bottom: 0cm">• goss :
+Gradient-based One-Side Sampling</p>
+<p style="margin-bottom: 0cm"><u>Learning_rate </u>(shrinkage):  
+slow learning  turn requiring more trees to be added to the ensemble.
+ gives regularisation effect.  Reduces influence of individual tree
+and  improves model</p>
+<h2 class="western"><a name="__RefHeading___Toc1486_4083667713"></a><a name="6.6-Model-Scores"></a>
+6.6 Model Scores</h2>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<table width="100%" cellpadding="4" cellspacing="0">
+	<col width="86*"/>
+
+	<col width="45*"/>
+
+	<col width="51*"/>
+
+	<col width="74*"/>
+
+	<tr valign="top">
+		<td width="34%" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p>
+			<b>Model type</b></p>
+		</td>
+		<td width="18%" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><pre class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal"><font color="#212121"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="2" style="font-size: 9pt"><b>mean_square error</b></font></font></font></pre>
+		</td>
+		<td width="20%" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><pre class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal; text-align: left; orphans: 2; widows: 2"><font color="#212121"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="2" style="font-size: 9pt"><b>mean_absolute error</b></font></font></font></pre>
+		</td>
+		<td width="29%" style="border: 1px solid #000000; padding: 0.1cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+			<font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="2" style="font-size: 10pt"><b>kaggle</b></font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="34%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p style="margin-bottom: 0cm">
+			Logistic regression,</p>
+			<p><a name="__RefHeading___Toc1490_4083667713"></a> Linear
+			regression</p>
+		</td>
+		<td width="18%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">9.24998</font></font></p>
+		</td>
+		<td width="20%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">8.891554</font></font></p>
+		</td>
+		<td width="29%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">9.44293</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="34%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p style="margin-bottom: 0cm">
+			SGDClassifier,</p>
+			<p><a name="__RefHeading___Toc1494_4083667713"></a>SGDRegressor</p>
+		</td>
+		<td width="18%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">3.8762e+25</font></font></p>
+		</td>
+		<td width="20%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">9.7391e+23</font></font></p>
+		</td>
+		<td width="29%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">1114008574477370000000000</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="34%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p style="margin-bottom: 0cm">
+			DT-Classifier,</p>
+			<p><a name="__RefHeading___Toc1498_4083667713"></a>Support Vector
+			Regression 
+			</p>
+		</td>
+		<td width="18%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">2.11168</font></font></p>
+		</td>
+		<td width="20%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.29602</font></font></p>
+		</td>
+		<td width="29%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.8896</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="34%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p style="margin-bottom: 0cm">
+			 DecisionTreeClassifier,</p>
+			<p><a name="__RefHeading___Toc1502_4083667713"></a>DecisionTreeRegressor</p>
+		</td>
+		<td width="18%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">2.1249005</font></font></p>
+		</td>
+		<td width="20%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.25609</font></font></p>
+		</td>
+		<td width="29%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.88771</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="34%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p>
+			 RandomForestRegressor, RandomForestClassifier</p>
+		</td>
+		<td width="18%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">2.110571</font></font></p>
+		</td>
+		<td width="20%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.25809</font></font></p>
+		</td>
+		<td width="29%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.88726</font></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="34%" height="49" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p style="margin-bottom: 0cm">
+			LGBMClassifier,</p>
+			<p style="margin-bottom: 0cm"><a name="__RefHeading___Toc1508_4083667713"></a>
+			LGBMRegressor</p>
+			<p><br/>
+
+			</p>
+		</td>
+		<td width="18%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">2.1098</font></font></p>
+		</td>
+		<td width="20%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.263</font></font></p>
+		</td>
+		<td width="29%" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm"><p align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+			<font face="Liberation Serif, serif"><font size="2" style="font-size: 10pt">0.88457
+			(21st position)<br/>
+0.88437 (17th position)<br/>
+0.88397 (14th
+			position)</font></font></p>
+		</td>
+	</tr>
+</table>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc1510_4083667713"></a><a name="7.0-Model-Analysis"></a>
+7.0 Model Analysis</h1>
+<h2 class="western"><a name="__RefHeading___Toc1512_4083667713"></a><a name="7.0.0-Objective"></a>
+7.0.0 Objective</h2>
+<p align="left" style="margin-bottom: 0cm; orphans: 2; widows: 2"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">The
+objective of </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">Post
+Training analys</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">is
+</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">is
+</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">to
+analyse  input data  o</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">f</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+models to improve performance. This will ensure that data is of good
+quality and improve model performance. This approach is called </span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>Data
+Centric approach</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">.</span></span></span></span></font></font></font></span></p>
+<p align="left" style="margin-bottom: 0cm; orphans: 2; widows: 2"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">Source
+:
+</span></span></span></span></font></font></font></span><a href="https://www.deeplearning.ai/wp-content/uploads/2021/06/MLOps-From-Model-centric-to-Data-centric-AI.pdf"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">https://www.deeplearning.ai/wp-content/uploads/2021/06/MLOps-From-Model-centric-to-Data-centric-AI.pdf</font></font></a><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+</span></span></span></font></font></span></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal"><br/>
+Credit
+: Andrew Ng</span></span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal"><a name="__RefHeading___Toc1514_4083667713"></a><a name="7.1.1-LBG-classification-model-:"></a>
+<font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b>7.1.1
+LBG classification model </b></font></font>
+</h2>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal"><a name="__RefHeading___Toc1516_4083667713"></a>
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">The
+Classifier Feature importance shows the important features are </span></font></font></font>
+</p>
+<ul>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal"><a name="__RefHeading___Toc1518_4083667713"></a>
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">year_max
+	</span></font></font></font>
+	</p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal"><a name="__RefHeading___Toc1520_4083667713"></a>
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">date_max
+	</span></font></font></font>
+	</p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">TrafficSource_ReferralPath_max</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">channelGrouping_OS_max</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">year_min</span></font></font></font></p>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">date_diff</span></font></font></font></p>
+</ul>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">We
+analyse these features in more detail to understand model
+performance. For the classifier to be effective,the feature plots
+should not overlap.</span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<br/>
+
+</p>
+<h3 class="western" style="margin-top: 0cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal"><a name="__RefHeading___Toc1522_4083667713"></a><a name="Conclusion-of-Data-Analysis:"></a>
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">Conclusion
+of Data Analysis:</span></font></font></font></h3>
+<p><span style="display: inline-block; border: none; padding: 0cm"><font color="#0000ff">The
+Feature Plots shows that classifier features have overlap hence the
+model in not effective in classifying data. To overcome this new
+features have to designed without overlap so model can better
+classify the data.</span></font></p>
+<p align="left" style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">The
+Feature importance graph shows, temporal features like year_max,
+date_max are important for classifier. Also the number of features in
+the graph are also less. So more features can be included</span></font></p>
+<p align="left" style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">to
+separate data into classes, five different querys were tried on input
+data.These queries to separate data into classes are not effective
+due to overlap of data. To make model more effetive more data can be
+collected. Such that this data helps with classification</span></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<br/>
+
+</p>
+<h2 class="western" style="margin-top: 0cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal"><a name="__RefHeading___Toc1524_4083667713"></a><a name="7.3-LBG-Regression-model"></a>
+<font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b><font color="#000000">7</font><font color="#000000">.3
+LBG Regression model</font></b></font></font></h2>
+<h3 class="western" style="margin-top: 0cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; text-decoration: none"><a name="__RefHeading___Toc1526_4083667713"></a><a name="7.3.2--LBG-Regression---Data-Analysis:-Remove-outliers"></a>
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt"><b><span style="background: transparent"><font color="#000000">7.3.2
+LBG Regression Data Analysis: Remove outliers</span></span></b></font></font></font></h3>
+<p align="left" style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">we
+can use standard deviation as a cut-off for identifying outliers.
+From Gaussian distribution remove values are more than a fixed
+Standard Deviations from the Mean.Values outside this can be
+considered outliers.</span></font></p>
+<p align="left" style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">By
+selecting range of 6 sigma, <span style="font-variant: normal"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">lower
+</span></span></span></span><span style="font-variant: normal"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">cutoff
+</span></span></span></span><span style="font-variant: normal"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">value
+is less than min value for difference.This means no data points are
+removed.</span></span></span></span></span></font></font></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; text-decoration: none">
+<br/>
+
+</p>
+<h2 class="western" style="margin-top: 0cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; text-decoration: none"><a name="__RefHeading___Toc1528_4083667713"></a><a name="7.4--Conclusion"></a>
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b><span style="background: transparent"><font color="#000000">7.4
+Conclusion</span></span></b></font></font></font></h2>
+<p align="left" style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">Using
+cutoff of 6 sigma for outlier the kaggle score is 0.88413.<br/>
+Using
+cutoff of 5 sigma for outlier the kaggle score is 0.88418.<br/>
+
+<font color="#0000ff">Since removal of data points reduces the
+score(using 5 sigma).We can conclude there are no outliers in data
+for regression model. Using 6 sigma no datapoints are removed since
+lower range is less than minimum value.</font></span></font></p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000">Below
+is screenhot of kaggle scores (16th position in leaderboard)</span></font></p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; text-decoration: none">
+<img src="blog_html_c4374c0758883f3d.png" name="Image1" align="left" width="591" height="141" border="0"/>
+<br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc1530_4083667713"></a><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>8</b></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>
+Model Deployment </b></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>API</b></span></span></font></font></span></h1>
+<p align="left" style="margin-bottom: 0cm; font-weight: normal"><span style="display: inline-block; border: none; padding: 0cm"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="font-variant: normal"><font face="Liberation Serif, serif"><span style="letter-spacing: normal"><span style="font-style: normal">The
+notebook ¨Final.ipynb” contains the deployment API. A sample test
+point </span></span></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><span style="letter-spacing: normal"><span style="font-style: normal">i</span></span></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><span style="letter-spacing: normal"><span style="font-style: normal">s
+extacted from the test dataset and used as input for deployment API. </span></span></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><span style="letter-spacing: normal"><span style="font-style: normal">
+</span></span></font></span></span></font></font>
+</p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<br/>
+
+</p>
+<h2 class="western" align="left" style="margin-top: 0cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; text-decoration: none"><a name="__RefHeading___Toc1532_4083667713"></a>
+<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><b><span style="background: transparent"><font color="#000000">Objective
+and Function Description</span></span></b></font></font></font></h2>
+<p align="left" style="margin-top: 0.2cm; margin-bottom: 0.2cm"><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">The
+objective </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">here
+</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">is
+to develop deployment API for the best performing ML model. </span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">The
+models developed earlier are saved using joblib python module.</span></span></span></font></font></font></span><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+The functions are </span></span></span></span></font></font></font></span>
+</p>
+<ul>
+	<li><p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">process_data
+	</span></font></font></font>
+	</p>
+	<li><p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000">regr_metric</span></font></font></font></p>
+</ul>
+<h3 class="western" style="margin-top: 0cm; margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</h3>
+<h2 class="western"><a name="__RefHeading___Toc1534_4083667713"></a><a name="process_data(in_point)"></a>
+process_data(in_point)</h2>
+<p align="left" style="margin-top: 0.2cm; margin-bottom: 0.2cm; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>input</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+: csv file with sample data point(s).<br/>
+</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>output</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+: predictions for the input data.<br/>
+</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>processing</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">:
+This function takes the input data sample and produces prediction for
+the input data.The input data is pre-processed to handle nulls.Then
+helper functions perform feature engineering to get additional
+features. These features undergo feature transformation. The
+transformed features are used to compute the final
+prediction.<br/>
+</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>display</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">:
+The functions has display for process time</span></span></span></span></font></font></font></span></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc1536_4083667713"></a><a name="regr_metric(test_sampl,y_pred)"></a>
+regr_metric(test_sampl,y_pred)</h2>
+<p align="left" style="margin-top: 0.2cm; margin-bottom: 0.2cm; line-height: 100%; orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0cm"><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>input</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+: input data ,model prediction.<br/>
+</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>output</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">
+: model metrics mean_squared_error and
+mean_absolute_error.<br/>
+</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>processing</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">:
+This function takes input data sample and model prediction for this
+data.Using these two inputs this function computes the metrics for
+the regression model like mean_squared_error and
+mean_absolute_error.<br/>
+</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><strong>display</b></span></span></font></font></font></span></strong><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="font-variant: normal">:
+mean_squared_error , mean_absolute_error</span></span></span></span></font></font></font></span></p>
+<p align="left" style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc1538_4083667713"></a><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>9</b></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>
+Model Deployment </b></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>on
+Cloud</b></span></span></font></font></span></h1>
+<p style="margin-bottom: 0cm; line-height: 100%">The next step is to
+deploy the model on Cloud. The cloud platform used here is  GCP
+(Google Cloud Platform) . The Flask gramework is used to used to
+develop the web API for the model.</p>
+<p style="margin-bottom: 0cm; line-height: 100%">The Google AppEngine
+service has to be enabled for model deployment. For deployment of
+model on App Engine, following modules are required</p>
+<p style="margin-bottom: 0cm; line-height: 100%">1) main.py:
+containing the flask web API</p>
+<p style="margin-bottom: 0cm; line-height: 100%">2) index.html: This
+is the html form containing the API for accepting the file input. The
+html should be placed in  /templates folder.</p>
+<p style="margin-bottom: 0cm; line-height: 100%">3) app.yaml :
+containing the modules to be intalled for the project.</p>
+<p style="margin-bottom: 0cm; line-height: 100%">The process of
+deploying the model is as follows</p>
+<p style="margin-bottom: 0cm; line-height: 100%">- Upload code to app
+engine</p>
+<p style="margin-bottom: 0cm; line-height: 100%">- place html in
+/templates folder</p>
+<p style="margin-bottom: 0cm; line-height: 100%">- open cloud shell
+and run command “gloud init”  to set the project configuration</p>
+<p style="margin-bottom: 0cm; line-height: 100%">-  run command”gloud
+app deploy”to deploy the project code.</p>
+<p style="margin-bottom: 0cm; line-height: 100%">- go to project url
+generated. The home page has an option to upload the input file  
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">- upload the input
+file and press submit.</p>
+<p style="margin-bottom: 0cm; line-height: 100%">- The model process
+input and displays the prediction in new page.</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%">The model deployment
+video is available in url <a href="https://youtu.be/jgBiqw5Q-B8">https://youtu.be/jgBiqw5Q-B8</a>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h1 class="western"><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>9</b></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>
+</b></span></span></font></font></span><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>References</b></span></span></font></font></span></h1>
+<p style="margin-bottom: 0cm; line-height: 100%"><a href="http://www.AppliedAICourse.com/"><span style="font-variant: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">http://www.</span></span></span></font></font></span></a><a href="http://www.AppliedAICourse.com/">AppliedAICourse.com</a><span style="font-variant: normal"><font color="#030303"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></font></font></span>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><a href="http://www.AppliedAICourse.com/"><span style="font-variant: normal"><font color="#030303"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">http://www.</span></span></span></font></font></font></span></a><a href="http://www.AppliedAICourse.com/"><span style="font-variant: normal"><font color="#000080"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="zxx"><span style="font-style: normal"><u><span style="font-weight: normal">kaggle</span></u></span></span></span></font></font></font></span></a><a href="http://www.AppliedAICourse.com/">.com</a><span style="font-variant: normal"><font color="#030303"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></font></font></span>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><a href="https://www.kaggle.com/c/ga-customer-revenue-prediction/discussion/82614">https://www.kaggle.com/c/ga-customer-revenue-prediction/discussion/82614</a><span style="font-variant: normal"><font color="#030303"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font></font></font></span>
+</p>
+<p style="margin-bottom: 0cm; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><span style="font-variant: normal"><font color="#030303"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">l</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#030303"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">inkedin
+: </span></span></span></font></font></font></span><a href="http://www.linkedin.com/in/ramapriyakp">www.linkedin.com/in/ramapriyakp</a><span style="display: inline-block; border: none; padding: 0cm"><font color="#030303"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="background: transparent"><span style="font-variant: normal">
+</span></span></span></span></span></font></font></font></span>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+<br/>
+
+</p>
+</body>
+</html>
